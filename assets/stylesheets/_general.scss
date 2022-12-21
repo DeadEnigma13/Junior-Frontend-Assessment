@@ -6,7 +6,7 @@ $containers: (
     "max-width": 90vw
   ),
   "mobile": (
-    "breakpoint": 600px,
+    "breakpoint": 767px,
     "max-width": calc(100vw - 30px)
   )
 ); // Usage: map.get($containers, "desktop", "max-width");
