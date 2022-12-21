@@ -1,3 +1,14 @@
+function sortByName(a, b) {
+  if (a.name < b.name) {
+    return -1;
+  }
+  if (a.name > b.name) {
+    return 1;
+  }
+  return 0;
+}
+
+
 window.pets = [];
 const pushPet = pet => {
   window.pets.push(pet);
@@ -44,6 +55,7 @@ class Pet {
 }
 
 const petData = fetch('assets/data/pets.json').then(response => response.json()).then(data => {
+  data.sort(sortByName);
   data.forEach(pet => {
     pushPet(new Pet(
       pet.name,
