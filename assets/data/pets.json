@@ -63,5 +63,15 @@
     "breed": "persian",
     "favoriteFood": "fish",
     "favoriteToy": "feather"
+  },
+  {
+    "name": "Beethoven",
+    "species": "dog",
+    "age": 12,
+    "color": "brown",
+    "breed": "st bernards",
+    "favoriteFood": "dog food",
+    "favoriteToy": "squeeky toy",
+    "goodboy": true
   }
 ]
