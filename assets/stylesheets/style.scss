@@ -119,6 +119,16 @@ main {
     border: 3px solid #EFEFEF;
     padding: 20px;
 
+    &__featured {
+      border: 3px solid gold;
+      padding: 15px;
+    }
+
+    &__badDog {
+      border: 3px solid red;
+      padding: 15px;
+    }
+    
     &__title {
       text-align: center;
       font-size: 18px;

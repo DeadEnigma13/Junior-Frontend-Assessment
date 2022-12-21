@@ -111,8 +111,6 @@ input {
 }
 .main-header__nav-link:hover {
   color: #898989;
-  transition-duration: 300ms;
-  opacity: 0.65;
 }
 
 main {
@@ -174,6 +172,14 @@ main {
   border: 3px solid #EFEFEF;
   padding: 20px;
 }
+.pets__card__featured {
+  border: 3px solid gold;
+  padding: 15px;
+}
+.pets__card__badDog {
+  border: 3px solid red;
+  padding: 15px;
+}
 .pets__card__title {
   text-align: center;
   font-size: 18px;
@@ -202,51 +208,6 @@ main {
   text-transform: uppercase;
   border: none;
   margin-top: 30px;
-  cursor: pointer;
-}
-.hidden {
-  display: none;
-}
-.overlay {
-  width: 100vw;
-  height: 100vh;
-  background-color: #aaaaaa;
-  position: fixed;
-  top: 0;
-  z-index: 5;
-} 
-.popup {
-  text-align: center;
-  background-color: var(--blue);
-  border-radius: 25px;
-  border: solid 3px #898989;
-  width: 350px;
-  height: 150px;
-  max-width: 350px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-}
-.popup .text {
-  margin-top: 25px;
-  font-size: 1.5rem;
-  color: #fff;
-}
-.modalBtn {
-  display: block;
-  width: 100%;
-  text-decoration: none;
-  color: #fff;
-  background-color: var(--blue);
-  padding: 10px 0;
-  font-size: 12px;
-  font-weight: bold;
-  letter-spacing: 1px;
-  text-transform: uppercase;
-  border: none;
-  margin-top: 25px;
   cursor: pointer;
 }
 
