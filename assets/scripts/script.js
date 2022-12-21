@@ -1,11 +1,11 @@
 const popup = document.getElementById("myModal");
 const overlay = document.getElementById("overlay");
 
-function closeModal() {
+function closePopup() {
   popup.classList.toggle("hidden");
   overlay.classList.toggle("hidden");
 }
-function openModal() {
+function openPopup() {
   popup.classList.toggle("hidden");
   overlay.classList.toggle("hidden");
 }
@@ -50,7 +50,7 @@ class Pet {
         <p class="pets__card__info">Breed: ${this.breed}</p>
         <p class="pets__card__info">Favorite Food: ${this.favoriteFood}</p>
         <p class="pets__card__info">Favorite Toy: ${this.favoriteToy}</p>
-        <button type="button" onclick="openModal()" class="pets__card__button">More Info</button>
+        <button type="button" onclick="openPopup()" class="pets__card__button">More Info</button>
       </div>
     `;
   }
@@ -65,7 +65,7 @@ class Pet {
         <p class="pets__card__info">Breed: ${this.breed}</p>
         <p class="pets__card__info">Favorite Food: ${this.favoriteFood}</p>
         <p class="pets__card__info">Favorite Toy: ${this.favoriteToy}</p>
-        <button type="button" onclick="openModal()" class="pets__card__button">More Info</button>
+        <button type="button" onclick="openPopup()" class="pets__card__button">More Info</button>
       </div>
     `;
   }
@@ -81,7 +81,7 @@ class Pet {
           <p class="pets__card__info">Breed: ${this.breed}</p>
           <p class="pets__card__info">Favorite Food: ${this.favoriteFood}</p>
           <p class="pets__card__info">Favorite Toy: ${this.favoriteToy}</p>
-          <button type="button" onclick="openModal()" class="pets__card__button">More Info</button>
+          <button type="button" onclick="openPopup()" class="pets__card__button">More Info</button>
         </div>
       `;
     }
@@ -92,7 +92,7 @@ class Pet {
     if (!petsGrid) return;
 
     petsGrid.innerHTML = "";
-    windows.pets.forEach((pet) => {
+    window.pets.forEach((pet) => {
       if (pet.featured === true) {
         petsGrid.innerHTML += pet.generateFeaturedCard();
       } else if (pet.badDog === true) {
