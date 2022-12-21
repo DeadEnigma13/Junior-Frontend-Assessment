@@ -10,25 +10,25 @@ function openModal() {
   overlay.classList.toggle("hidden");
 }
 
-function sortByName(a, b) {
-  if (a.name < b.name) {
+function sortSpecial(a, b) {
+  if (a.featured === true || a.name < b.name) {
     return -1;
   }
-  if (a.name > b.name) {
+  if (a.featured === false || a.name > b.name) {
     return 1;
   }
   return 0;
 }
 
 window.pets = [];
-const pushPet = pet => {
+const pushPet = (pet) => {
   window.pets.push(pet);
   Pet.renderAll();
-}
+};
 
 class Pet {
   constructor(name,
-    species, age, color, breed, favoriteFood, favoriteToy, featured = false, badDog = true) {
+    species, age, color, breed, favoriteFood, favoriteToy, featured = false, badDog = false) {
     this.name = name;
     this.species = species;
     this.age = age;
@@ -54,6 +54,7 @@ class Pet {
       </div>
     `;
   }
+
   generateFeaturedCard() {
     return `
       <div class="pets__featured__card">
@@ -104,9 +105,10 @@ class Pet {
 }
 
 const petData = fetch('assets/data/pets.json').then(response => response.json()).then(data => {
-  data.sort(sortByName);
-  data.forEach(pet => {
-    pushPet(new Pet(
+  data.sort(sortSpecial);
+  data.forEach((pet) => {
+    pushPet(
+      new Pet(
       pet.name,
       pet.species,
       pet.age,
