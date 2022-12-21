@@ -111,6 +111,8 @@ input {
 }
 .main-header__nav-link:hover {
   color: #898989;
+  transition-duration: 300ms;
+  opacity: 0.65;
 }
 
 main {
