@@ -1,10 +1,13 @@
 const popup = document.getElementById("myModal");
+const overlay = document.getElementById("overlay");
 
 function closeModal() {
-  modal.classList.toggle("hidden");
+  popup.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
 }
 function openModal() {
-  modal.classList.toggle("hidden");
+  popup.classList.toggle("hidden");
+  overlay.classList.toggle("hidden");
 }
 
 function sortByName(a, b) {
