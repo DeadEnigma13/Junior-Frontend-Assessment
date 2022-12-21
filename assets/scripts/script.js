@@ -21,14 +21,14 @@ function sortByName(a, b) {
 }
 
 window.pets = [];
-const pushPet = pet => {
+const pushPet = (pet) => {
   window.pets.push(pet);
   Pet.renderAll();
 }
 
 class Pet {
   constructor(name,
-    species, age, color, breed, favoriteFood, favoriteToy, featured = false) {
+    species, age, color, breed, favoriteFood, favoriteToy, featured = false, badDog = false) {
     this.name = name;
     this.species = species;
     this.age = age;
@@ -37,6 +37,7 @@ class Pet {
     this.favoriteFood = favoriteFood;
     this.favoriteToy = favoriteToy;
     this.featured = featured;
+    this.badDog = badDog;
   }
 
   generateCard() {
@@ -76,7 +77,8 @@ const petData = fetch('assets/data/pets.json').then(response => response.json())
       pet.breed,
       pet.favoriteFood,
       pet.favoriteToy,
-      pet.featured
+      pet.featured,
+      pet.badDog
     ));
   });
 });
