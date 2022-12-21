@@ -1,3 +1,12 @@
+const popup = document.getElementById("myModal");
+
+function closeModal() {
+  modal.classList.toggle("hidden");
+}
+function openModal() {
+  modal.classList.toggle("hidden");
+}
+
 function sortByName(a, b) {
   if (a.name < b.name) {
     return -1;
@@ -7,7 +16,6 @@ function sortByName(a, b) {
   }
   return 0;
 }
-
 
 window.pets = [];
 const pushPet = pet => {
@@ -38,7 +46,7 @@ class Pet {
         <p class="pets__card__info">Breed: ${this.breed}</p>
         <p class="pets__card__info">Favorite Food: ${this.favoriteFood}</p>
         <p class="pets__card__info">Favorite Toy: ${this.favoriteToy}</p>
-        <button type="button" class="pets__card__button">More Info</button>
+        <button type="button" onclick="openModal()" class="pets__card__button">More Info</button>
       </div>
     `;
   }
